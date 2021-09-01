@@ -1,0 +1,59 @@
+# Official example: https://github.com/PyCQA/pylint/blob/master/pylintrc
+# Or generate by: `pylint --generate-rcfile > .pylintrc_example
+
+[MASTER]
+
+# Use multiple processes to speed up Pylint. Specifying 0 will auto-detect the
+# number of processors available to use.
+jobs=1
+
+# List of plugins (as comma separated values of python module names) to load,
+# usually to register additional checkers.
+
+disable=too-many-arguments,
+        no-member,
+        missing-module-docstring,
+        missing-function-docstring,
+        missing-class-docstring
+
+[BASIC]
+
+# Maximum number of characters on a single line.
+max-line-length=120
+# Ignore imports when computing similarities.
+ignore-imports=yes
+# Minimum lines number of a similarity.
+min-similarity-lines=20
+
+# Good variable names which should always be accepted, separated by a comma.
+good-names=i,
+           j,
+           k,
+           n,
+           ex,
+           sc,
+           df,
+           fs,
+           fd,
+           ok,
+           Run,
+           _
+
+[STRING_QUOTES]
+
+string-quote=single
+triple-quote=single
+docstring-quote=double
+
+[REPORTS]
+
+# Set the output format. Available formats are text, parseable, colorized, json
+# and msvs (visual studio). You can also give a reporter class, e.g.
+# mypackage.mymodule.MyReporterClass.
+output-format=colorized
+
+# Tells whether to display a full report or only the messages.
+reports=no
+
+# Activate the evaluation score.
+score=yes
